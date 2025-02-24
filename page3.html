@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRITE YOUR MESSAGE HERE</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ABOUT YOUR DAY</h1><br>
+        <h4>*SCREENSHOT YOUR MESSAGE SO THAT I'LL KNOW (OPTIONAL)</h4><br>
+        <h4>or you can just dm me😊</h4>
+        <form action="submit_note.php" method="post" id="messageForm">
+            <textarea name="message" rows="10" cols="30" placeholder="Write your message here..." required></textarea>
+            <br>
+            <button class="landing-button" type="submit">DONE</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("messageForm").onsubmit = function() {
+            window.location.href = 'page4.html';
+            return false; // Prevent actual form submission
+        };
+    </script>
+</body>
+</html>
