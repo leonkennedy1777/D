@@ -1,0 +1,95 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffc0cb, #ff69b4);
+    background-size: 200% 200%;
+    animation: gradientBackground 10s ease infinite;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Animation for background */
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container styling */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+/* Button styling */
+button {
+    padding: 15px 30px;
+    margin: 20px;
+    background-color: #ff69b4;
+    color: rgb(255, 0, 162);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493;
+    transform: translateY(-3px);
+}
+
+/* Image styling */
+img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: translateY(-5px);
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        width: 50%;
+        padding: 20px;
+        box-shadow: none;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
